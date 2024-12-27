@@ -95,7 +95,7 @@
               <ChartComponent />
             </dv-border-box-13>
             <dv-border-box-12>
-              
+              <RainfallChart />
             </dv-border-box-12>
           </div>
         </div>
@@ -109,7 +109,7 @@ import drawMixin from "../utils/drawMixin";
 import { formatTime } from '../utils/index.js'
 import axios from 'axios'
 import ChartComponent from "../components/ChartComponent.vue";
-
+import RainfallChart from "../components/echart/center/rainfallChart";
 
 export default {
   mixins: [ drawMixin ],
@@ -130,7 +130,8 @@ export default {
     }
   },
   components: {
-    ChartComponent
+    ChartComponent,
+    RainfallChart
   },
   mounted() {
     this.timeFn()
