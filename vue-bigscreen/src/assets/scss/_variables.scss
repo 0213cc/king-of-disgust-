@@ -1,146 +1,98 @@
-$primary: #1A5CD7;
-$info-1: #4394e4;
-$info: #4b67af;
-$white: #ffffff;
-$light: #f9f9f9;
-$grey-1: #999999;
-$grey: #666666;
-$dark-1: #5f5f5f;
-$dark: #222222;
-$black-1: #171823;
-$black: #000000;
-$icon: #5cd9e8;
+// 颜色
+$colors: (
+  "primary": #1A5CD7,
+  "info-1": #4394e4,
+  "info": #4b67af,
+  "white": #ffffff,
+  "light": #f9f9f9,
+  "grey-1": #999999,
+  "grey": #666666,
+  "dark-1": #5f5f5f,
+  "dark": #222222,
+  "black-1": #171823,
+  "black": #000000,
+  "icon": #5cd9e8
+);
 
-
+// 字体大小
 $base-font-size: 0.2rem;
-$font-size-xxs: 0.1rem;
-$font-size-xs: 0.125rem;
-$font-size-sm: 0.2875rem;
-$font-size-md: 0.1625rem;
-$font-size-lg: 0.175rem;
-$font-size-xl: 0.2rem;
-$font-size-xxl: 0.225rem;
-$font-size-xxxl: 0.25rem;
+$font-sizes: (
+  xxs: 0.1,
+  //8px
+    xs: 0.125,
+  //10px
+    sm: 0.2875,
+  //12px
+    md: 0.1625,
+  //13px
+    lg: 0.175,
+  //14px
+    xl: 0.2,
+  //16px
+    xxl: 0.225,
+  //18px
+    xxxl: 0.25 //20px,,,,
+);
 
-
-$spacing-unit: 0.5rem;
-
-
+// 宽高
 .w-100 {
   width: 100%;
 }
-
 .h-100 {
   height: 100%;
 }
 
-
+//flex
 .d-flex {
   display: flex;
 }
-
 .flex-column {
   flex-direction: column;
 }
-
 .flex-wrap {
   flex-wrap: wrap;
 }
-
 .flex-nowrap {
   flex-wrap: nowrap;
 }
+$flex-jc: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+);
+
+$flex-ai: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch,
+);
 
 .flex-1 {
   flex: 1;
 }
 
-
-.mt-1 {
-  margin-top: $spacing-unit;
-}
-
-.mt-2 {
-  margin-top: $spacing-unit * 2;
-}
-
-.mt-3 {
-  margin-top: $spacing-unit * 3;
-}
-
-.mb-1 {
-  margin-bottom: $spacing-unit;
-}
-
-.mb-2 {
-  margin-bottom: $spacing-unit * 2;
-}
-
-.mb-3 {
-  margin-bottom: $spacing-unit * 3;
-}
-
-.ml-1 {
-  margin-left: $spacing-unit;
-}
-
-.ml-2 {
-  margin-left: $spacing-unit * 2;
-}
-
-.ml-3 {
-  margin-left: $spacing-unit * 3;
-}
-
-.mr-1 {
-  margin-right: $spacing-unit;
-}
-
-.mr-2 {
-  margin-right: $spacing-unit * 2;
-}
-
-.mr-3 {
-  margin-right: $spacing-unit * 3;
-}
-
-
-.justify-content-start {
-  justify-content: flex-start;
-}
-
-.justify-content-end {
-  justify-content: flex-end;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.justify-content-between {
-  justify-content: space-between;
-}
-
-.justify-content-around {
-  justify-content: space-around;
-}
-
-.justify-content-evenly {
-  justify-content: space-evenly;
-}
-
-.align-items-start {
-  align-items: flex-start;
-}
-
-.align-items-end {
-  align-items: flex-end;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.align-items-stretch {
-  align-items: stretch;
-}
+//.mt-1 => margin top
+//spacing
+$spacing-types: (
+  m: margin,
+  p: padding,
+);
+$spacing-directions: (
+  t: top,
+  r: right,
+  b: bottom,
+  l: left,
+);
+$spacing-base-size: 0.5rem;
+$spacing-sizes: (
+  0: 0,
+  1: 0.5,
+  2: 1,
+  3: 1.5,
+  4: 2,
+  5: 2.5,
+);

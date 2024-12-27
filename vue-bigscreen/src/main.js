@@ -13,9 +13,6 @@ import 'element-plus/dist/index.css'
 
 const app = createApp(App);
 
-// 配置自定义元素
-app.config.compilerOptions.isCustomElement = tag => tag.startsWith('dv-')
-
 app.use(router);
 app.use(store);
 app.use(dataV);

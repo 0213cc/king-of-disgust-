@@ -29,7 +29,7 @@
           <div class="d-flex aside-width">
             <div class="react-left ml-4 react-l-s">
               <span class="react-left"></span>
-              <span class="text">作者:</span>
+              <span class="text">作者: 张春贤</span>
             </div>
             <div class="react-left ml-3">
               <span class="text">华东师范大学数据科学与工程学院</span>
@@ -71,12 +71,12 @@
             </div>
             <div>
               <dv-border-box-12>
-                
+             
               </dv-border-box-12>
             </div>
             <!-- 中间 -->
             <div>
-              
+          
             </div>
             <!-- 中间 -->
             <div>
@@ -92,10 +92,10 @@
           <!-- 第四行数据 -->
           <div class="bottom-box">
             <dv-border-box-13>
-              
+              <ChartComponent />
             </dv-border-box-13>
             <dv-border-box-12>
-              <ChartComponent />
+              
             </dv-border-box-12>
           </div>
         </div>
@@ -109,6 +109,7 @@ import drawMixin from "../utils/drawMixin";
 import { formatTime } from '../utils/index.js'
 import axios from 'axios'
 import ChartComponent from "../components/ChartComponent.vue";
+
 
 export default {
   mixins: [ drawMixin ],

@@ -8,33 +8,29 @@
   transform: translate(-50%, -50%);
   transform-origin: left top;
   overflow: hidden;
-
+  
   .bg {
     width: 100%;
     height: 100%;
     padding: 16px 16px 0 16px;
-    background-image: url('@/assets/Bg.gif');
+    background-image: url("../assets/Bg.gif");
     background-size: cover;
     background-position: center center;
   }
 
   .host-body {
-
     .dv-dec-10,
     .dv-dec-10-s {
       width: 33.3%;
       height: 5px;
     }
-
     .dv-dec-10-s {
       transform: rotateY(180deg);
     }
-
     .dv-dec-8 {
       width: 200px;
       height: 50px;
     }
-
     .title {
       position: relative;
       width: 500px;
@@ -64,7 +60,6 @@
     .aside-width {
       width: 40%;
     }
-
     .react-r-s,
     .react-l-s {
       background-color: #0f1325;
@@ -76,7 +71,6 @@
         text-align: right;
         width: 500px;
       }
-
       font-size: 18px;
       width: 300px;
       line-height: 50px;
@@ -104,7 +98,6 @@
         width: 700px;
         text-align: left;
       }
-
       font-size: 18px;
       width: 500px;
       height: 50px;
