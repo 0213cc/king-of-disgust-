@@ -74,14 +74,14 @@ export default {
             {
               show: true,
               realtime: true,
-              start: 65,
-              end: 85
+              start: 20,
+              end: 75
             },
             {
               type: 'inside',
               realtime: true,
-              start: 65,
-              end: 85
+              start: 20,
+              end: 75
             }
           ],
           xAxis: [{
