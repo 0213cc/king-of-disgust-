@@ -44,12 +44,12 @@
           <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; flex: 1;">
             <dv-border-box-1 style="height: 100%; min-width: 0;">
               <div style="height: 100%; padding: 8px;">
-
+                <cardchart/>
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
               <div style="height: 100%; padding: 8px;">
-
+                 <DataBox/> 
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
@@ -68,12 +68,12 @@
           <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; flex: 1;">
             <dv-border-box-1 style="height: 100%; min-width: 0;">
               <div style="height: 100%; padding: 8px;">
-                <ChartComponent />
+                <!-- <ChartComponent /> -->
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
               <div style="height: 100%; padding: 8px;">
-                <ChartComponent />
+                <RainfallChart />
               </div>
             </dv-border-box-1>
           </div>
@@ -87,9 +87,9 @@
 import drawMixin from "../utils/drawMixin";
 import { formatTime } from '../utils/index.js'
 import axios from 'axios'
-import ChartComponent from "../components/ChartComponent.vue";
-import RainfallChart from "../components/echart/center/rainfallChart";
-
+import RainfallChart from "./RainfallChart.vue";
+import DataBox from "../components/echart/databox/";
+import cardchart from  "./cardchart.vue"
 export default {
   mixins: [ drawMixin ],
   name: 'IndexPage',
@@ -109,8 +109,9 @@ export default {
     }
   },
   components: {
-    ChartComponent,
-    RainfallChart
+    cardchart,
+    RainfallChart,
+    DataBox
   },
   mounted() {
     this.timeFn()

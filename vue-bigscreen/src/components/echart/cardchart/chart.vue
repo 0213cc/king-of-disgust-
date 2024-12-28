@@ -2,7 +2,7 @@
     <div class="chart-container">
         <div class="selector-container">
             <button 
-                v-for="option in ['star', 'fork', 'issue']" 
+                v-for="option in ['star', 'fork', 'issue','request']" 
                 :key="option"
                 @click="handleTypeChange(option)"
                 :class="{ active: currentType === option }"
@@ -23,7 +23,7 @@ export default {
         return {
             chart: null,
             options: {},
-            currentType: 'star'
+            currentType: 'request'
         }
     },
     props: {
@@ -53,12 +53,9 @@ export default {
             
             this.options = {
                 title: {
-                    text: 'Punch Card of Github'
+                    text: ''
                 },
-                legend: {
-                    data: ['Punch Card'],
-                    left: 'right'
-                },
+
                 polar: {},
                 tooltip: {
                     formatter: function (params) {
