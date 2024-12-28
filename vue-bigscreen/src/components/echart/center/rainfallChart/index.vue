@@ -408,7 +408,6 @@ export default {
         flowData: commonKeys.map(key => starData[key]),
         rainfallData: commonKeys.map(key => forkData[key]),
       }
-      console.log(data)
       return data
     }
   },
