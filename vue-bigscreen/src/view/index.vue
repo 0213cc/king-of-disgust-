@@ -54,7 +54,7 @@
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
               <div style="height: 100%; padding: 8px;">
-
+                <cloud></cloud>
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
@@ -91,6 +91,7 @@ import RainfallChart from "./RainfallChart.vue";
 import DataBox from "../components/echart/databox/";
 import cardchart from  "./cardchart.vue"
 import StreamChart from "./streamchart.vue"
+import cloud from"./wordCloudchart.vue"
 
 export default {
   mixins: [ drawMixin ],
@@ -114,7 +115,8 @@ export default {
     cardchart,
     RainfallChart,
     DataBox,
-    StreamChart
+    StreamChart,
+    cloud
   },
   mounted() {
     this.timeFn()
