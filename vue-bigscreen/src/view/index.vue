@@ -3,100 +3,79 @@
     <div class="bg">
       <dv-loading v-if="loading">Loading...</dv-loading>
       <div v-else class="host-body">
-        <div class="d-flex jc-center">
-          <dv-decoration-10 class="dv-dec-10" />
-          <div class="d-flex jc-center">
-            <dv-decoration-8 class="dv-dec-8" :color="decorationColor" />
-            <div class="title">
-              <span class="title-text">OpenDigger可视化大屏</span>
-              <dv-decoration-6
-                class="dv-dec-6"
-                :reverse="true"
-                :color="['#50e3c2', '#67a1e5']"
-              />
-            </div>
-            <dv-decoration-8
-              class="dv-dec-8"
-              :reverse="true"
-              :color="decorationColor"
-            />
-          </div>
-          <dv-decoration-10 class="dv-dec-10-s" />
+        <div style="text-align: center;">
+          <span style="font-size: 36px; text-align: center;color: rebeccapurple;">开源数据可视化大屏</span>
         </div>
-
         <!-- 第二行 -->
-        <div class="d-flex jc-between px-2">
-          <div class="d-flex aside-width">
-            <div class="react-left ml-4 react-l-s">
-              <span class="react-left"></span>
-              <span class="text">作者: 张春贤</span>
-            </div>
-            <div class="react-left ml-3">
-              <span class="text">华东师范大学数据科学与工程学院</span>
-            </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <div class="react-left">
+            <span class="text">华东师范大学数据科学与工程学院</span>
           </div>
-          <div class="d-flex aside-width">
-            <div class="react-right bg-color-blue mr-3">
-              <span class="text fw-b">{{this.$store.state.currentRepository}}</span>
-            </div>
-            <div class="react-right mr-4 react-l-s" style="display: flex; align-items: center; justify-content: flex-end;">
-              <span class="text" style="padding-right: 30px; transform: skewX(45deg);">
-                <el-tooltip class="item" effect="dark" content="输入格式: Github用户名/仓库名. 支持查询未在候选列表的仓库" placement="top">
-                  <el-row>
-                    <el-col :span="24">
-                      <el-autocomplete
-                          v-model="state1"
-                          prefix-icon="el-icon-search"
-                          :fetch-suggestions="querySearch"
-                          placeholder="请输入仓库名"
-                          @select="handleSelect"
-                          @change="handleSelect"
-                          clearable
-                      ></el-autocomplete>
-                    </el-col>
-                  </el-row>
-                </el-tooltip>
-              </span>
-            </div>
+
+          <div
+            style="background-color:seagreen; width: 900px; height: 40px; display: flex; justify-content: center; align-items: center;">
+            <span style="font-size: 36px;color: rgba(255, 0, 0, 0.9);;">{{ this.$store.state.currentRepository }}</span>
+          </div>
+
+          <div class="react-right react-l-s"
+            style="display: flex; align-items: center; height: 50px; justify-content: flex-end;">
+            <span class="text" style="height: 100%; display: flex; align-items: center; transform: skewX(45deg);">
+              <el-tooltip effect="dark" content="输入格式: Github用户名/仓库名. " placement="top" style="height: 100%;">
+                <el-row style="height: 100%;">
+                  <el-col :span="24" style="height: 100%;">
+                    <el-autocomplete v-model="state1" prefix-icon="el-icon-search" :fetch-suggestions="querySearch"
+                      placeholder="请输入仓库名" @select="handleSelect" @change="handleSelect" clearable
+                      style="width: 300px; height: 100%;">
+                      <template #suffix>
+                        <i class="el-icon-search" style="line-height: 100px;"></i>
+                      </template>
+                    </el-autocomplete>
+                  </el-col>
+                </el-row>
+              </el-tooltip>
+            </span>
           </div>
         </div>
 
-        <div class="body-box">
-          <!-- 第三行数据 -->
-          <div class="content-box">
-            <div>
-              <dv-border-box-12>
-                
-              </dv-border-box-12>
-            </div>
-            <div>
-              <dv-border-box-12>
-             
-              </dv-border-box-12>
-            </div>
-            <!-- 中间 -->
-            <div>
-          
-            </div>
-            <!-- 中间 -->
-            <div>
-              
-            </div>
-            <div>
-              <dv-border-box-13>
-                
-              </dv-border-box-13>
-            </div>
+        <!-- 第三行 -->
+        <div
+          style="margin-top: 20px; height: calc(100vh - 180px); display: flex; flex-direction: column; gap: 20px; padding: 0 10px;">
+          <!-- 上半部分 -->
+          <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; flex: 1;">
+            <dv-border-box-1 style="height: 100%; min-width: 0;">
+              <div style="height: 100%; padding: 8px;">
+
+              </div>
+            </dv-border-box-1>
+            <dv-border-box-1 style="height: 100%; min-width: 0;">
+              <div style="height: 100%; padding: 8px;">
+
+              </div>
+            </dv-border-box-1>
+            <dv-border-box-1 style="height: 100%; min-width: 0;">
+              <div style="height: 100%; padding: 8px;">
+
+              </div>
+            </dv-border-box-1>
+            <dv-border-box-1 style="height: 100%; min-width: 0;">
+              <div style="height: 100%; padding: 8px;">
+
+              </div>
+            </dv-border-box-1>
           </div>
 
-          <!-- 第四行数据 -->
-          <div class="bottom-box">
-            <dv-border-box-13>
-              <ChartComponent />
-            </dv-border-box-13>
-            <dv-border-box-12>
-              <RainfallChart />
-            </dv-border-box-12>
+          <!-- 下半部分 -->
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; flex: 1;">
+            <dv-border-box-1 style="height: 100%; min-width: 0;">
+              <div style="height: 100%; padding: 8px;">
+                <ChartComponent />
+              </div>
+            </dv-border-box-1>
+            <dv-border-box-1 style="height: 100%; min-width: 0;">
+              <div style="height: 100%; padding: 8px;">
+                <ChartComponent />
+              </div>
+            </dv-border-box-1>
           </div>
         </div>
       </div>
