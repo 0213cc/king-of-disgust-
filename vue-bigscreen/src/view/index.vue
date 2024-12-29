@@ -88,7 +88,7 @@ import drawMixin from "../utils/drawMixin";
 import { formatTime } from '../utils/index.js'
 import axios from 'axios'
 import RainfallChart from "./RainfallChart.vue";
-import DataBox from "../components/echart/databox/";
+import DataBox from "./databox.vue";
 import cardchart from  "./cardchart.vue"
 import StreamChart from "./streamchart.vue"
 import cloud from"./wordCloudchart.vue"
@@ -188,6 +188,3 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '../assets/scss/index.scss';
-</style>
