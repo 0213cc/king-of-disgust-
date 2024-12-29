@@ -10,7 +10,7 @@
                 {{ option.toUpperCase() }}
             </button>
         </div>
-        <div id="cardChart" class="chart-box" style="height: 480px; width: 600px;"></div>
+        <div id="cardChart" class="chart-box" style="height:500px; width: 100%;"></div>
     </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div id="RainfallChart" class="chart-box" style="height: 480px; width: 600px;"></div>
+  <div id="RainfallChart" class="chart-box" style="height: 300px; width: 100%;"></div>
 </template>
 
 <script>
@@ -41,10 +41,6 @@ export default {
     cdata: {
       handler(newData) {
         this.options = {
-          title: {
-            text: 'Rainfall and Flow Relationship',
-            left: 'center'
-          },
           grid: {
             bottom: 80
           },
@@ -67,14 +63,14 @@ export default {
             }
           },
           legend: {
-            data: ['Flow', 'Rainfall'],
+            data: ['Activity', 'Openrank'],
             left: 10
           },
           dataZoom: [
             {
               show: true,
               realtime: true,
-              start: 20,
+              start: 0,
               end: 75
             },
             {
@@ -92,20 +88,17 @@ export default {
           }],
           yAxis: [
             {
-              name: 'Flow(m³/s)',
+              name: '项目活跃度',
               type: 'value'
             },
             {
-              name: 'Rainfall(mm)',
-              nameLocation: 'start',
-              alignTicks: true,
+              name: 'Openrank值',
               type: 'value',
-              inverse: true
             }
           ],
           series: [
             {
-              name: 'Flow',
+              name: 'Activity',
               type: 'line',
               areaStyle: {},
               lineStyle: {
@@ -114,10 +107,10 @@ export default {
               emphasis: {
                 focus: 'series'
               },
-              data: newData.flowData || []
+              data: newData.activityData || []
             },
             {
-              name: 'Rainfall',
+              name: 'Openrank',
               type: 'line',
               yAxisIndex: 1,
               areaStyle: {},
@@ -127,7 +120,7 @@ export default {
               emphasis: {
                 focus: 'series'
               },
-              data: newData.rainfallData || []
+              data: newData.openrankData || []
             }
           ]
         }

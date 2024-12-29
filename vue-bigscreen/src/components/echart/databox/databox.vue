@@ -153,36 +153,40 @@ export default {
 .data-box-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
 }
 
 .data-box {
     background: rgba(45, 140, 240, 0.1);
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
 }
 
 .chart-container {
-    height: 100px;
-    width: 100%;
+    flex: 1;
+    min-height: 120px;
 }
 
 .data-info {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .number {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #fff;
 }
 
 .label {
-    font-size: 14px;
+    font-size: 12px;
     color: #8b949e;
-    margin-top: 5px;
+    margin-top: 3px;
 }
 </style>

@@ -1,26 +1,26 @@
 <template>
-  <div id="center1-container">
-    <div class="chart-title">openrank值与项目活跃度的关系</div>
+  <div id="code-change-container">
+    <div class="chart-title">代码变更统计</div>
     <div class="bg-color-black">
       <div style="height: 100%;">
-        <RainfallChartContainer/>
+        <CodeChangeChartContainer/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import RainfallChartContainer from '@/components/echart/rainfallChart'
+import CodeChangeChartContainer from '@/components/echart/codeChangeChart'
 
 export default {
   components: {
-    RainfallChartContainer
+    CodeChangeChartContainer
   }
 }
 </script>
 
 <style lang="scss" scoped>
-#center1-container {
+#code-change-container {
   padding: 20px 16px;
   height: 100%;
   width: 100%;
