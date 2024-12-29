@@ -1,15 +1,15 @@
 <template>
-  <div id="index" ref="appRef">
-    <div class="bg">
+  <div class="screen-wrapper">
+    <dv-full-screen-container>
       <dv-loading v-if="loading">Loading...</dv-loading>
-      <div v-else class="host-body">
+      <div v-else >
         <div style="text-align: center;">
           <span style="font-size: 36px; text-align: center;color: rebeccapurple;">开源数据可视化大屏</span>
         </div>
         <!-- 第二行 -->
         <div style="display: flex; justify-content: space-between; align-items: center;">
-          <div class="react-left">
-            <span class="text">华东师范大学数据科学与工程学院</span>
+          <div  style="font-size: 18px;width: 500px;height: 50px;line-height: 50px;text-align: center;transform: skewX(45deg);background-color: #6c07f1;">
+            <span style="display: inline-block;transform: skewX(-45deg);white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 500px;">华东师范大学数据科学与工程学院</span>
           </div>
 
           <div
@@ -17,9 +17,8 @@
             <span style="font-size: 36px;color: rgba(255, 0, 0, 0.9);;">{{ this.$store.state.currentRepository }}</span>
           </div>
 
-          <div class="react-right react-l-s"
-            style="display: flex; align-items: center; height: 50px; justify-content: flex-end;">
-            <span class="text" style="height: 100%; display: flex; align-items: center; transform: skewX(45deg);">
+          <div style="display: flex; align-items: center; height: 50px; justify-content: flex-end; background-color: #ffd000;text-align: right;width: 500px;font-size: 18px;line-height: 50px;text-align: center;transform: skewX(-45deg);">
+            <span style="height: 100%; display: flex; align-items: center; transform: skewX(45deg);">
               <el-tooltip effect="dark" content="输入格式: Github用户名/仓库名. " placement="top" style="height: 100%;">
                 <el-row style="height: 100%;">
                   <el-col :span="24" style="height: 100%;">
@@ -53,7 +52,7 @@
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
-              <div style="height: 100%; padding: 8px;">
+              <div style="height: 100%; padding: 0px;">
                 <cloud></cloud>
               </div>
             </dv-border-box-1>
@@ -67,19 +66,19 @@
           <!-- 下半部分 -->
           <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; flex: 1;">
             <dv-border-box-1 style="height: 100%; min-width: 0;">
-              <div style="height: 100%; padding: 8px;">
+              <div style="height: 100%; width: 100%; padding: 8px; display: flex; flex-direction: column;">
                 <CodeChangeChart />
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
-              <div style="height: 100%; padding: 8px;">
-                <RainfallChart />
+              <div style="height: 100%; width: 100%; padding: 8px; display: flex; flex-direction: column;">
+                
               </div>
             </dv-border-box-1>
           </div>
         </div>
       </div>
-    </div>
+    </dv-full-screen-container>
   </div>
 </template>
 
@@ -93,6 +92,7 @@ import cardchart from  "./cardchart.vue"
 import StreamChart from "./streamchart.vue"
 import cloud from"./wordCloudchart.vue"
 import CodeChangeChart from "./CodeChangeChart.vue"
+import bgImage from '@/assets/Bg.gif'
 
 export default {
   mixins: [ drawMixin ],
@@ -109,7 +109,8 @@ export default {
       decorationColor: ['#568aea', '#000000'],
       value: '',
       state1: '',
-      repositories: []
+      repositories: [],
+      bgImage
     }
   },
   components: {
@@ -191,5 +192,44 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/scss/index.scss';
+.screen-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('@/assets/Bg.gif');
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+
+  :deep(.dv-full-screen-container) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+
+  :deep(.bottom-charts) {
+    height: 100%;
+    
+    .chart-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .echarts {
+      flex: 1;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+
+.host-body {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
 </style>

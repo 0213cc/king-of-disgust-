@@ -32,7 +32,7 @@ export default {
     span {
       font-size: 24px;
       font-weight: bold;
-      color: #553C9A;  // 深灰蓝色，看起来更专业
+      color: #553C9A; 
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
   }

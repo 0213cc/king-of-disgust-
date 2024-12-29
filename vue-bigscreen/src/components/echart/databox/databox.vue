@@ -156,14 +156,14 @@ export default {
     gap: 10px;
     height: 100%;
     width: 100%;
-    padding: 10px;
+    padding-top: 90px;
 }
 
 .data-box {
-    background: rgba(45, 140, 240, 0.1);
+    background: rgba(45, 140, 240, 0.01);
     border-radius: 8px;
     padding: 15px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.001);
     display: flex;
     flex-direction: column;
 }
@@ -181,12 +181,12 @@ export default {
 .number {
     font-size: 20px;
     font-weight: bold;
-    color: #fff;
+    color: rgba(45, 140, 240, 1);
 }
 
 .label {
     font-size: 12px;
-    color: #8b949e;
+    color:rgba(45, 140, 240, 1);
     margin-top: 3px;
 }
 </style>

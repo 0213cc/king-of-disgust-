@@ -1,5 +1,5 @@
 <template>
-    <div ref="chartContainer" id="StreamChart" class="chart-box" style="height: 400px; width:400px;"></div>
+    <div ref="chartContainer" id="StreamChart" class="chart-box" style="height: 500px; width:550px;"></div>
 </template>
 <script>
 import * as echarts from 'echarts'

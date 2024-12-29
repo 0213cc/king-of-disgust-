@@ -1,5 +1,5 @@
 <template>
-    <div id="CodeChangeChart" class="chart-box" style="height: 300px; width: 100%;"></div>
+    <div id="CodeChangeChart" class="chart-box" style="height: 660px; width: 100%;"></div>
 </template>
 
 <script>

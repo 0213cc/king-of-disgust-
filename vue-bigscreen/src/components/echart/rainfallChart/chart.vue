@@ -1,5 +1,5 @@
 <template>
-  <div id="RainfallChart" class="chart-box" style="height: 300px; width: 100%;"></div>
+  <div id="RainfallChart" class="chart-box" style="height: 600px; width: 100%;"></div>
 </template>
 
 <script>
