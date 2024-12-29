@@ -4,27 +4,27 @@
       <dv-loading v-if="loading">Loading...</dv-loading>
       <div v-else >
         <div style="text-align: center;">
-          <span style="font-size: 36px; text-align: center;color: rebeccapurple;">开源数据可视化大屏</span>
+          <span style="font-size: 46px; text-align: center;color: rebeccapurple;">开源数据可视化</span>
         </div>
         <!-- 第二行 -->
         <div style="display: flex; justify-content: space-between; align-items: center;">
           <div  style="font-size: 18px;width: 500px;height: 50px;line-height: 50px;text-align: center;transform: skewX(45deg);background-color: #6c07f1;">
-            <span style="display: inline-block;transform: skewX(-45deg);white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 500px;">华东师范大学数据科学与工程学院</span>
+            <span style="display: inline-block;transform: skewX(-45deg);white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 500px;color: #fff;font-size: 30px;">华东师范大学数据科学与工程学院</span>
           </div>
 
           <div
-            style="background-color:seagreen; width: 900px; height: 40px; display: flex; justify-content: center; align-items: center;">
-            <span style="font-size: 36px;color: rgba(255, 0, 0, 0.9);;">{{ this.$store.state.currentRepository }}</span>
+            style=" width: 900px; height: 40px; display: flex; justify-content: center; align-items: center;">
+            <span style="font-size: 36px;color: rgba(255, 0, 0, 0.9);;">当前仓库：{{ this.$store.state.currentRepository }}</span>
           </div>
 
-          <div style="display: flex; align-items: center; height: 50px; justify-content: flex-end; background-color: #ffd000;text-align: right;width: 500px;font-size: 18px;line-height: 50px;text-align: center;transform: skewX(-45deg);">
+          <div style="display: flex; align-items: center; height: 50px; justify-content: flex-end; background-color: #6c07f1;text-align: right;width: 500px;font-size: 18px;line-height: 50px;text-align: center;transform: skewX(-45deg);">
             <span style="height: 100%; display: flex; align-items: center; transform: skewX(45deg);">
-              <el-tooltip effect="dark" content="输入格式: Github用户名/仓库名. " placement="top" style="height: 100%;">
-                <el-row style="height: 100%;">
-                  <el-col :span="24" style="height: 100%;">
+              <el-tooltip effect="light" content="输入格式: Github用户名/仓库名. " placement="top" >
+                <el-row >
+                  <el-col :span="24" >
                     <el-autocomplete v-model="state1" prefix-icon="el-icon-search" :fetch-suggestions="querySearch"
                       placeholder="请输入仓库名" @select="handleSelect" @change="handleSelect" clearable
-                      style="width: 300px; height: 100%;">
+                      >
                       <template #suffix>
                         <i class="el-icon-search" style="line-height: 100px;"></i>
                       </template>
@@ -43,12 +43,12 @@
           <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; flex: 1;">
             <dv-border-box-1 style="height: 100%; min-width: 0;">
               <div style="height: 100%; padding: 8px;">
-                <cardchart/>
+                <DataBox/>
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
               <div style="height: 100%; padding: 8px;">
-                 <DataBox/> 
+                <cardchart/>
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">

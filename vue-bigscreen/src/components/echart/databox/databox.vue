@@ -77,7 +77,7 @@ export default {
                                 radius: '80%',
                                 color: [item.color || '#2d8cf0'],
                                 backgroundStyle: {
-                                    color: '#0d1117'
+                                    color:"rgba(220, 208, 255, 0.4)"
                                 },
                                 outline: {
                                     show: false
@@ -117,7 +117,7 @@ export default {
                             radius: '80%',
                             color: [item.color || '#2d8cf0'],
                             backgroundStyle: {
-                                color: '#0d1117'
+                                color: "rgba(220, 208, 255, 0.4)"
                             },
                             outline: {
                                 show: false
@@ -156,7 +156,7 @@ export default {
     gap: 10px;
     height: 100%;
     width: 100%;
-    padding-top: 90px;
+    padding-top: 40px;
 }
 
 .data-box {
@@ -179,14 +179,14 @@ export default {
 }
 
 .number {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
-    color: rgba(45, 140, 240, 1);
+    color: rgba(147, 112, 219, 1);
 }
 
 .label {
-    font-size: 12px;
-    color:rgba(45, 140, 240, 1);
+    font-size: 30px;
+    color: rgba(147, 112, 219, 1);
     margin-top: 3px;
 }
 </style>

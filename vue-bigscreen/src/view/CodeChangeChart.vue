@@ -29,8 +29,8 @@ export default {
   flex-direction: column;
   
   .chart-title {
-    color: #87CEEB;
-    font-size: 16px;
+    color: #4682B4;
+    font-size: 24px;
     margin-bottom: 10px;
     text-align: center;
     font-weight: bold;

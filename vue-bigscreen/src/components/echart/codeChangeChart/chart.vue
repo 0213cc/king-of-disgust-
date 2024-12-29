@@ -1,5 +1,5 @@
 <template>
-    <div id="CodeChangeChart" class="chart-box" style="height: 660px; width: 100%;"></div>
+    <div id="CodeChangeChart" class="chart-box" style="height: 570px; width: 100%;"></div>
 </template>
 
 <script>
@@ -54,7 +54,13 @@ export default {
                         }
                     },
                     legend: {
-                        data: ['新增代码行数', '删除代码行数', '代码变更总量']
+                        data: ['新增代码行数', '删除代码行数', '代码变更总量'],
+                        textStyle: {
+                            fontSize: 26,
+                            color: '#4682B4'
+                        },
+                        itemGap: 20,
+                        padding: [15, 5]
                     },
                     toolbox: {
                         feature: {
@@ -81,7 +87,7 @@ export default {
                             type: 'line',
                             stack: 'Total',
                             areaStyle: {
-                                color: '#87CEEB',
+                                color: '#4169E1',
                                 opacity: 0.95
                             },
                             itemStyle: {
@@ -103,14 +109,14 @@ export default {
                             type: 'line',
                             stack: 'Total',
                             areaStyle: {
-                                color: '#FFA07A',
+                                color: '#FF4D4F',
                                 opacity: 0.95
                             },
                             itemStyle: {
-                                color: '#FFA07A'
+                                color: '#FF4D4F'
                             },
                             lineStyle: {
-                                color: '#FFA07A'
+                                color: '#FF4D4F'
                             },
                             emphasis: {
                                 focus: 'series',
