@@ -8,8 +8,8 @@
         </div>
         <!-- 第二行 -->
         <div style="display: flex; justify-content: space-between; align-items: center; padding: 1vh 0;">
-          <div  style="font-size: 1.2vw;width: 26vw;height: 5vh;line-height: 5vh;text-align: center;transform: skewX(45deg);background-color: #6c07f1;">
-            <span style="display: inline-block;transform: skewX(-45deg);white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 26vw;color: #fff;font-size: 1.8vw;">
+          <div  style="font-size: 1.2vw;width: 28vw;height: 5vh;line-height: 5vh;text-align: center;transform: skewX(45deg);background-color: #6c07f1;">
+            <span style="display: inline-block;transform: skewX(-45deg);white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 26vw;color: #fff;font-size: 1.5vw;">
             华东师范大学数据科学与工程学院
             </span>
           </div>
@@ -62,7 +62,7 @@
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
               <div style="height: 100%; padding: 1vh 1vw;">
-                  <!-- <StreamChart /> -->
+                  <StreamChart />
               </div>
             </dv-border-box-1>
           </div>

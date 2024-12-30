@@ -1,5 +1,5 @@
 <template>
-    <div ref="chartContainer" id="StreamChart" class="chart-box" style="height: 500px; width:550px;"></div>
+    <div ref="chartContainer" id="StreamChart" class="chart-container" ></div>
 </template>
 <script>
 import * as echarts from 'echarts'
@@ -174,3 +174,22 @@ export default {
     }
 }
 </script>
+<style scoped>
+
+.chart-container {
+
+  position: absolute;
+
+  top: 6vh;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  will-change: transform;
+
+}
+
+</style>

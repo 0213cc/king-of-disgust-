@@ -21,10 +21,16 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 1vw;
 }
 
 .chart-title {
-  text-align: center;
+  font-size: 3vh;
+    text-align: center;
+    font-weight: bold;
+    margin-top: -2vh;
+    margin-bottom: 2vh;
+    padding: 1vh 0;
   color: #006400;
 }
 </style>

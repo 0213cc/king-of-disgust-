@@ -153,16 +153,16 @@ export default {
 .data-box-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 1vw;
     height: 100%;
     width: 100%;
-    padding-top: 40px;
+    padding-top: 4vh;
 }
 
 .data-box {
     background: rgba(45, 140, 240, 0.01);
-    border-radius: 8px;
-    padding: 15px;
+    border-radius: 0.5vw;
+    padding: 1.5vh;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.001);
     display: flex;
     flex-direction: column;
@@ -170,23 +170,23 @@ export default {
 
 .chart-container {
     flex: 1;
-    min-height: 120px;
+    min-height: 12vh;
 }
 
 .data-info {
     text-align: center;
-    margin-top: 5px;
+    margin-top: 0.5vh;
 }
 
 .number {
-    font-size: 30px;
+    font-size: 2.8vh;
     font-weight: bold;
     color: rgba(147, 112, 219, 1);
 }
 
 .label {
-    font-size: 30px;
+    font-size: 2.8vh;
     color: rgba(147, 112, 219, 1);
-    margin-top: 3px;
+    margin-top: 0.3vh;
 }
 </style>
