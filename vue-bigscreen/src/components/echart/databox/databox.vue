@@ -153,40 +153,58 @@ export default {
 .data-box-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1vw;
-    height: 100%;
-    width: 100%;
-    padding-top: 4vh;
+    grid-template-rows: repeat(2, 1fr);
+    position: absolute;
+top: 6vh;
+
+left: 0;
+
+right: 0;
+
+bottom: 3vh;
+
+will-change: transform;
 }
 
 .data-box {
     background: rgba(45, 140, 240, 0.01);
     border-radius: 0.5vw;
-    padding: 1.5vh;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.001);
+    padding: 1vh;
+    box-shadow: rgba(0, 0, 0, 0.001);
     display: flex;
     flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
 }
 
 .chart-container {
     flex: 1;
-    min-height: 12vh;
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .data-info {
     text-align: center;
-    margin-top: 0.5vh;
+    margin-top: 0.3vh;
+    flex-shrink: 0;
 }
 
 .number {
-    font-size: 2.8vh;
+    font-size: 2.2vh;
     font-weight: bold;
     color: rgba(147, 112, 219, 1);
+    line-height: 1.2;
 }
 
 .label {
-    font-size: 2.8vh;
+    font-size: 2.2vh;
     color: rgba(147, 112, 219, 1);
     margin-top: 0.3vh;
+    line-height: 1.2;
 }
 </style>

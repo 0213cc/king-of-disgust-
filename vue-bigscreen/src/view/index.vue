@@ -15,7 +15,7 @@
           </div>
 
           <div
-            style="width: 46vw; height: 4vh; display: flex; justify-content: center; align-items: center;">
+            style="width: 56vw; height: 4vh; display: flex; justify-content: center; align-items: center;">
             <span style="font-size: 2.2vw;color: rgba(255, 0, 0, 0.9);">
             当前仓库：{{ this.$store.state.currentRepository }}
             </span>
@@ -47,12 +47,12 @@
           <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1vw; height: 50%; padding-bottom: 1vh;">
             <dv-border-box-1 style="height: 100%; min-width: 0;">
               <div style="height: 100%; padding: 1vh 1vw;">
-                <!-- <DataBox/> -->
+                <DataBox/>
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
               <div style="height: 100%; padding:1vh 1vw;">
-                <!-- <cardchart/> -->
+                <cardchart/>
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">

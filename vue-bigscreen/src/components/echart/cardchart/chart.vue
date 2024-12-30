@@ -10,7 +10,7 @@
                 {{ option.toUpperCase() }}
             </button>
         </div>
-        <div id="cardChart" class="chart-box" style="height:500px; width: 100%;"></div>
+        <div id="cardChart" class="chart-container" ></div>
     </div>
 </template>
 
@@ -232,5 +232,20 @@ export default {
 }
 .selector-container button.active:hover {
     background: rgba(140, 40, 200, 0.3);
+}
+.chart-container {
+
+position: absolute;
+
+top: 6vh;
+
+left: 0;
+
+right: 0;
+
+bottom: 0;
+
+will-change: transform;
+
 }
 </style>

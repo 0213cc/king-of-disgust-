@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
         <DataBox :cdata="dataBoxList" />
     </div>
 </template>
@@ -150,3 +150,4 @@ export default {
     }
 }
 </script>
+

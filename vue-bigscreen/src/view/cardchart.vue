@@ -15,18 +15,20 @@
 
   <style lang="scss" scoped>
   #card-container {
-    padding: 20px 16px;
     height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1vw;
     
     .chart-title {
       color: #4B0082;  // 靛青色(Indigo)
-      font-size: 24px;
-      margin-bottom: 10px;
-      text-align: center;
-      font-weight: bold;
+      font-size: 3vh;
+    text-align: center;
+    font-weight: bold;
+    margin-top: -2vh;
+    margin-bottom: 2vh;
+    padding: 1vh 0;
     }
   }
   </style>

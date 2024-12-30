@@ -1,6 +1,6 @@
 <template>
-    <div class="databox-container">
-        <DataBoxContainer/>
+    <div class="databox-view">
+        <DataBoxContainer />
     </div>
 </template>
 
@@ -14,8 +14,8 @@ export default {
 </script>
 
 <style scoped>
-.databox-container {
-    height: 100%;
+.databox-view {
     width: 100%;
+    height: 100%;
 }
 </style>

@@ -119,7 +119,7 @@ export default {
 
   right: 0;
 
-  bottom: 0;
+  bottom: 3vh;
 
   will-change: transform;
 
