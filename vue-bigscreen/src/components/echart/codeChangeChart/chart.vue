@@ -1,5 +1,5 @@
 <template>
-    <div id="CodeChangeChart" class="chart-box" style="height: 570px; width: 100%;"></div>
+    <div id="CodeChangeChart" class="chart-container" ></div>
 </template>
 
 <script>
@@ -165,3 +165,22 @@ export default {
     }
 }
 </script>
+<style scoped>
+
+.chart-container {
+
+  position: absolute;
+
+  top: 6vh;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  will-change: transform;
+
+}
+
+</style>

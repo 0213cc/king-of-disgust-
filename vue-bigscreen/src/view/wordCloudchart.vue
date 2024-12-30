@@ -16,18 +16,19 @@ export default {
 
 <style lang="scss" scoped>
 #card-container {
-  padding: 20px 16px;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  
+  padding: 0 1vw;
   .chart-title {
     color: #B22222;  
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 3vh;
     text-align: center;
     font-weight: bold;
+    margin-top: -2vh;
+    margin-bottom: 2vh;
+    padding: 1vh 0;
   }
 }
 </style>

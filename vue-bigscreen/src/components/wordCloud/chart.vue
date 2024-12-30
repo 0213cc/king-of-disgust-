@@ -1,5 +1,5 @@
 <template>
-  <div :id="chartId" style="height: 500px; width: 550px;"></div>
+  <div :id="chartId" class="chart-container"></div>
 </template>
 
 <script>
@@ -107,3 +107,22 @@ export default {
   }
 };
 </script>
+<style scoped>
+
+.chart-container {
+
+  position: absolute;
+
+  top: 6vh;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  will-change: transform;
+
+}
+
+</style>

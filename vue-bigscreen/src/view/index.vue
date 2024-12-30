@@ -1,23 +1,27 @@
 <template>
   <div class="screen-wrapper">
-    <dv-full-screen-container>
+    <dv-full-screen-container mode="scale" :updateScale="true">
       <dv-loading v-if="loading">Loading...</dv-loading>
-      <div v-else >
-        <div style="text-align: center;">
-          <span style="font-size: 46px; text-align: center;color: rebeccapurple;">开源数据可视化</span>
+      <div v-else class="content-wrapper" style="display: flex; flex-direction: column;">
+        <div style="text-align: center; padding: 1vh 0;">
+          <span style="font-size: 3vw; text-align: center;color: rebeccapurple;">开源数据可视化</span>
         </div>
         <!-- 第二行 -->
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <div  style="font-size: 18px;width: 500px;height: 50px;line-height: 50px;text-align: center;transform: skewX(45deg);background-color: #6c07f1;">
-            <span style="display: inline-block;transform: skewX(-45deg);white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 500px;color: #fff;font-size: 30px;">华东师范大学数据科学与工程学院</span>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 1vh 0;">
+          <div  style="font-size: 1.2vw;width: 26vw;height: 5vh;line-height: 5vh;text-align: center;transform: skewX(45deg);background-color: #6c07f1;">
+            <span style="display: inline-block;transform: skewX(-45deg);white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 26vw;color: #fff;font-size: 1.8vw;">
+            华东师范大学数据科学与工程学院
+            </span>
           </div>
 
           <div
-            style=" width: 900px; height: 40px; display: flex; justify-content: center; align-items: center;">
-            <span style="font-size: 36px;color: rgba(255, 0, 0, 0.9);;">当前仓库：{{ this.$store.state.currentRepository }}</span>
+            style="width: 46vw; height: 4vh; display: flex; justify-content: center; align-items: center;">
+            <span style="font-size: 2.2vw;color: rgba(255, 0, 0, 0.9);">
+            当前仓库：{{ this.$store.state.currentRepository }}
+            </span>
           </div>
 
-          <div style="display: flex; align-items: center; height: 50px; justify-content: flex-end; background-color: #6c07f1;text-align: right;width: 500px;font-size: 18px;line-height: 50px;text-align: center;transform: skewX(-45deg);">
+          <div style="display: flex; align-items: center; height: 5vh; justify-content: flex-end; background-color: #6c07f1;text-align: right;width: 26vw;font-size: 1.2vw;line-height: 5vh;text-align: center;transform: skewX(-45deg);">
             <span style="height: 100%; display: flex; align-items: center; transform: skewX(45deg);">
               <el-tooltip effect="light" content="输入格式: Github用户名/仓库名. " placement="top" >
                 <el-row >
@@ -38,35 +42,35 @@
 
         <!-- 第三行 -->
         <div
-          style="margin-top: 20px; height: calc(100vh - 180px); display: flex; flex-direction: column; gap: 20px; padding: 0 10px;">
+          style="flex: 1; display: flex; flex-direction: column; padding: 0 1vw; min-height: 0;">
           <!-- 上半部分 -->
-          <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; flex: 1;">
+          <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1vw; height: 50%; padding-bottom: 1vh;">
             <dv-border-box-1 style="height: 100%; min-width: 0;">
-              <div style="height: 100%; padding: 8px;">
-                <DataBox/>
+              <div style="height: 100%; padding: 1vh 1vw;">
+                <!-- <DataBox/> -->
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
-              <div style="height: 100%; padding: 8px;">
-                <cardchart/>
+              <div style="height: 100%; padding:1vh 1vw;">
+                <!-- <cardchart/> -->
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
-              <div style="height: 100%; padding: 0px;">
+              <div style="height: 100%; padding: 1vh 1vw;">
                 <cloud></cloud>
               </div>
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
-              <div style="height: 100%; padding: 8px;">
-                  <StreamChart />
+              <div style="height: 100%; padding: 1vh 1vw;">
+                  <!-- <StreamChart /> -->
               </div>
             </dv-border-box-1>
           </div>
 
           <!-- 下半部分 -->
-          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; flex: 1;">
+          <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1vw; height: 50%; padding-top: 1vh;">
             <dv-border-box-1 style="height: 100%; min-width: 0;">
-              <div style="height: 100%; width: 100%; padding: 8px; display: flex; flex-direction: column;">
+              <div style="height: 100%; width: 100%; padding: 1vh 1vw; display: flex; flex-direction: column;">
                 <CodeChangeChart />
               </div>
             </dv-border-box-1>
@@ -201,35 +205,51 @@ export default {
   background-position: center center;
   overflow: hidden;
 
+  .content-wrapper {
+    position: absolute;
+    inset: 0;
+    transform-origin: 0 0;
+    will-change: transform;
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden;
+    perspective: 1000;
+  }
+
   :deep(.dv-full-screen-container) {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: transparent;
+    transform-origin: 0 0;
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000;
   }
 
   :deep(.bottom-charts) {
-    height: 100%;
+    position: relative;
+    flex: 1;
     
     .chart-container {
-      height: 100%;
+      position: absolute;
+      inset: 0;
       display: flex;
       flex-direction: column;
+      transform: translateZ(0);
     }
 
     .echarts {
       flex: 1;
-      width: 100% !important;
-      height: 100% !important;
+      position: relative;
+      transform: translateZ(0);
     }
   }
 }
 
 .host-body {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
   z-index: 10;
+  transform: translateZ(0);
 }
 </style>
