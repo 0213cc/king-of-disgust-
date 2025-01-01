@@ -49,27 +49,6 @@
 - Element Plus 2.4.0
 - Axios 1.7.9
 
-## 目录结构描述
-├── README.md // 帮助文档
-├── public // 静态资源
-├── src // 源代码目录
-│ ├── assets // 资源文件
-│ │ ├── Bg.gif // 背景图
-│ │ └── scss // 样式文件
-│ ├── components // 组件目录
-│ │ ├── echart // 图表组件
-│ │ │ ├── cardchart // 时间序列分布图
-│ │ │ ├── codeChangeChart // 代码变更统计
-│ │ │ ├── databox // 数据统计组件
-│ │ │ ├── rainfallChart // 关系图表
-│ │ │ └── stream // 流数据图表
-│ │ └── wordCloud // 词云图组件
-│ ├── router // 路由配置
-│ ├── store // Vuex状态管理
-│ ├── utils // 工具函数
-│ └── view // 页面视图
-├── vue.config.js // Vue 配置文件
-└── package.json // 项目依赖配置
 
 ## 功能特性
 
@@ -91,10 +70,43 @@
 
 ## 使用说明
 
-1. 安装依赖
-    npm install
-2. 开发环境运行
-    npm run serve
+### 获取项目
+```bash
+# 克隆项目
+git clone https://github.com/0213cc/king_of_disgust.git
+
+# 进入项目目录
+cd vue-bigscreen
+```
+
+### 安装和运行
+```bash
+# 安装依赖
+npm install
+
+# 开发环境运行
+npm run serve
+
+# 打包构建
+npm run build
+```
+
+### 开发注意事项
+1. 确保已安装 Node.js (>= 14.0.0)
+2. 如果安装依赖过程中出现问题，可以尝试：
+   ```bash
+   # 清除 npm 缓存
+   npm clean cache -f
+   
+   # 使用 cnpm 安装
+   npm install -g cnpm --registry=https://registry.npm.taobao.org
+   cnpm install
+   ```
+
+### 项目预览
+- 开发环境：访问 `http://localhost:8080`
+- 推荐浏览器：Chrome
+- 显示问题：请自行调整浏览器窗口的宽高比。
 
 ## 项目特点
 
