@@ -76,7 +76,7 @@
             </dv-border-box-1>
             <dv-border-box-1 style="height: 100%; min-width: 0;">
               <div style="height: 100%; width: 100%; padding: 8px; display: flex; flex-direction: column;">
-                <!-- <RainfallChart/> -->
+                <RainfallChart/>
               </div>
             </dv-border-box-1>
           </div>

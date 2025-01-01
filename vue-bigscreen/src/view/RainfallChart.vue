@@ -1,11 +1,7 @@
 <template>
   <div id="center1-container">
     <div class="chart-title">openrank值与项目活跃度的关系</div>
-    <div class="bg-color-black">
-      <div style="height: 100%;">
         <RainfallChartContainer/>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -21,28 +17,22 @@ export default {
 
 <style lang="scss" scoped>
 #center1-container {
-  padding: 20px 16px;
   height: 100%;
   width: 100%;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
+  padding: 0 1vw;
   
   .chart-title {
-    color: #87CEEB;
-    font-size: 16px;
-    margin-bottom: 10px;
+    color: #05aef1;
+    font-size: 3vh;
     text-align: center;
     font-weight: bold;
+    margin-top: -2vh;
+    margin-bottom: 2vh;
+    padding: 1vh 0;
   }
   
-  .bg-color-black {
-    flex: 1;
-    border-radius: 10px;
-    
-    > div {
-      height: 100%;
-    }
-  }
+  
 }
 </style> 

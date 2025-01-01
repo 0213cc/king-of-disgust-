@@ -1,5 +1,5 @@
 <template>
-  <div id="RainfallChart" class="chart-box" style="height: 600px; width: 100%;"></div>
+  <div id="RainfallChart" class="chart-container" ></div>
 </template>
 
 <script>
@@ -64,14 +64,21 @@ export default {
           },
           legend: {
             data: ['Activity', 'Openrank'],
-            left: 10
+            left: 'center',
+            top: '2%',
+            textStyle: {
+              fontSize: '2.5vh'
+            }
           },
           dataZoom: [
             {
               show: true,
               realtime: true,
               start: 0,
-              end: 75
+              end: 75,
+              textStyle: {
+                fontSize: '2vh'
+              }
             },
             {
               type: 'inside',
@@ -84,16 +91,43 @@ export default {
             type: 'category',
             boundaryGap: false,
             axisLine: { onZero: false },
+            axisLabel: {
+              fontSize: '2vh'
+            },
             data: newData.timeData?.map(str => str.replace(' ', '\n')) || []
           }],
           yAxis: [
             {
               name: '项目活跃度',
-              type: 'value'
+              type: 'value',
+              nameTextStyle: {
+                fontSize: '2.2vh'
+              },
+              axisLabel: {
+                fontSize: '2.2vh',
+                margin: 16,
+                formatter: function(value) {
+                  return value.toFixed(0);
+                }
+              }
             },
             {
               name: 'Openrank值',
+              nameLocation: 'start',
               type: 'value',
+              alignTicks: true,
+              inverse: true,
+              nameTextStyle: {
+                fontSize: '2.2vh'
+              },
+              axisLabel: {
+                fontSize: '2.2vh',
+                margin: 16,
+                formatter: function(value) {
+                  return value.toFixed(0);
+                }
+              },
+              splitNumber: 6
             }
           ],
           series: [
@@ -142,4 +176,19 @@ export default {
 </script>
 
 <style scoped>
+.chart-container {
+
+position: absolute;
+
+top: 6vh;
+
+left: 0;
+
+right: 0;
+
+bottom: 3vh;
+
+will-change: transform;
+
+}
 </style> 
