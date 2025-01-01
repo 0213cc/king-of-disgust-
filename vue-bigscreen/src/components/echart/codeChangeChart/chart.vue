@@ -87,7 +87,7 @@ export default {
                             type: 'line',
                             stack: 'Total',
                             areaStyle: {
-                                color: '#4169E1',
+                                color: '#87CEEB',
                                 opacity: 0.95
                             },
                             itemStyle: {
@@ -109,14 +109,14 @@ export default {
                             type: 'line',
                             stack: 'Total',
                             areaStyle: {
-                                color: '#FF4D4F',
+                                color: '#FFA07A',
                                 opacity: 0.95
                             },
                             itemStyle: {
-                                color: '#FF4D4F'
+                                color: '#FFA07A'
                             },
                             lineStyle: {
-                                color: '#FF4D4F'
+                                color: '#FFA07A'
                             },
                             emphasis: {
                                 focus: 'series',
@@ -129,7 +129,7 @@ export default {
                         {
                             name: '代码变更总量',
                             type: 'line',
-                            stack: undefined,
+                            stack: "Total",
                             itemStyle: {
                                 color: '#DDA0DD'
                             },
