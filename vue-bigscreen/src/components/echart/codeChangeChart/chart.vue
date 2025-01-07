@@ -129,7 +129,7 @@ export default {
                         {
                             name: '代码变更总量',
                             type: 'line',
-                            stack: "Total",
+                            stack: undefined,
                             itemStyle: {
                                 color: '#DDA0DD'
                             },
